@@ -6,14 +6,17 @@
 # Input: 5
 # Output: 120
 
-
 # n = int(input())
 # i = 1
 # result = 1
-# while i <= n:
-#     result = result * i
-#     i = i + 1
-# print(result)
+# if n != 0:
+#     while i <= n:
+#         result = result * i
+#         i = i + 1
+#     print(result)
+# else:
+#     print(0)
+
 
 
 # Задача №11. Решение в группах
