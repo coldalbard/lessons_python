@@ -27,25 +27,17 @@
 # Input: 5
 # Output: 6
 
-
-# A = int(input())
-# if A == 0:
-#     print(0)
-# elif A == 1:
-#     print(1)
+# n = int(input())
+# i = 2
+# fib1 = 0
+# fib2 = 1
+# while n > fib2:
+#     fib1, fib2 = fib2, fib1 + fib2
+#     i += 1
+# if n == fib2:
+#     print(i)
 # else:
-#     F1 = 0
-#     F2 = 1
-#     n = 1
-#     Fn = 0
-#     while Fn < A:
-#         Fn = F1 + F2
-#         F1, F2 = F2, Fn
-#         n += 1
-#     if Fn == A:
-#         print(n + 1)
-#     else:
-#         print(-1)
+#     print(-1)
 
 
 
@@ -68,6 +60,21 @@
 # Input: 6 -> -20 30 -40 50 10 -10
 # Output: 2
 
+# size = int(input())
+# i = 0
+# count = 0
+# count_max = 0
+# while i < size:
+#     month = int(input())
+#     i += 1
+#     if month > 0:
+#         count += 1
+#     else:
+#         count = 0
+#         continue
+#     count_max = count
+# print(count_max)
+
 
 
 # Задача №15. Решение в группах
@@ -84,3 +91,15 @@
 # Input: 5 -> 5 1 6 5 9
 # Output: 1 9
 
+# size2 = int(input())
+# i = 0
+# min = 1000
+# max = 0
+# while i < size2:
+#     num = int(input())
+#     if min > num:
+#         min = num
+#     elif max < num:
+#         max = num
+#     i += 1
+# print(min, max)
