@@ -13,7 +13,6 @@ import random
 
 # size = int(input("Please enter the length of the array: "))
 # num_array = [random.randint(1, 15) for i in range(size)]
-# num_array[-1] = size
 # print(num_array)
 #
 # count = 0
@@ -37,18 +36,36 @@ import random
 # 6
 # -> 5
 
+# 1 решение
+
 # size_n = int(input("Please enter the length of the array: "))
 # arr = [random.randint(1, 15) for i in range(size_n)]
-# arr[-1] = size_n
 # print(arr)
 #
 # x = int(input("Please enter the number N: "))
-# number = 0
+# number = arr[0]
+# difference = abs(arr[0] - x)
 #
-# for j in range(1, len(arr)):
-#     if arr[j - 1] < arr[j] <= x:
-#         number = arr[j]
+# for i in range(1, len(arr)):
+#     diff = abs(arr[i] - x)
+#     if diff < difference:
+#         difference = diff
+#         number = arr[i]
 # print(number)
+
+# 2 решение
+
+# size_array = int(input("Please enter the length of the array: "))
+# array = [random.randint(1, 15) for i in range(size_array)]
+# new_array = []
+# print(array)
+# N = int(input("Please enter the number N: "))
+#
+# for i in range(N):
+#     i = abs(array[i] - N)
+#     new_array.append(i)
+# print(f'{array[new_array.index(min(new_array))]}')
+
 
 
 
@@ -114,6 +131,8 @@ import random
 #         counter += 10
 # print(counter)
 
+
+
 # 2 решение
 # dictionary = {1:'AEIOULNSTRАВЕИНОРСТ',
 #       	2:'DGДКЛМПУ',
@@ -124,3 +143,6 @@ import random
 #       	10:'QZФЩЪ'}
 # new_text = input("Please enter the word: ").upper()
 # print(sum([k for i in new_text for k, v in dictionary.items() if i in v]))
+
+
+# dct = {abs(x - item): item for item in lst}
