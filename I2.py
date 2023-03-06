@@ -1,116 +1,72 @@
-# Задача №9. Решение в группах
-# По данному целому неотрицательному n вычислите
-# значение n!. N! = 1 * 2 * 3 * … * N (произведение всех
-# чисел от 1 до N) 0! = 1 Решить задачу используя цикл
-# while
-# Input: 5
-# Output: 120
+# import modul1 as m1
+
 
 # n = int(input())
-# i = 1
-# result = 1
-# if n != 0:
-#     while i <= n:
-#         result = result * i
-#         i = i + 1
-#     print(result)
-# else:
-#     print(0)
+# def sum_numbers(n):
+#     summa = 0
+#     for i in range(1, n + 1):
+#         summa += i
+#     return summa
+# a = sum_numbers(n)
+# print(a)
 
 
-
-# Задача №11. Решение в группах
-# Дано натуральное число A > 1. Определите, каким по
-# счету числом Фибоначчи оно является, то есть
-# выведите такое число n, что φ(n)=A. Если А не
-# является числом Фибоначчи, выведите число -1.
-# Input: 5
-# Output: 6
-
-# n = int(input())
-# i = 2
-# fib1 = 0
-# fib2 = 1
-# while n > fib2:
-#     fib1, fib2 = fib2, fib1 + fib2
-#     i += 1
-# if n == fib2:
-#     print(i)
-# else:
-#     print(-1)
+# def sum_stry(*args):
+#     res = ""
+#     for i in args:
+#         res += 1
+#     return res
+# print(sum_stry("q", "w", "e", "r"))
+# print(m1.max1(15, 9))
 
 
+# def fib(n):
+#     if n in [1, 2]:
+#         return 1
+#     return fib(n - 1) + fib(n - 2)
+#
+# list1 = []
+# for i in range(1, 10):
+#     list1.append(fib(i))
+# print(list1)
 
-# Задача №13. Решение в группах
-# Уставшие от необычно теплой зимы, жители решили узнать, 
-# действительно ли это самая длинная оттепель за всю историю 
-# наблюдений за погодой. Они обратились к синоптикам, а те, в 
-# свою очередь, занялись исследованиями статистики за 
-# прошлые годы. Их интересует, сколько дней длилась самая 
-# длинная оттепель. Оттепелью они называют период, в 
-# который среднесуточная температура ежедневно превышала 
-# 0 градусов Цельсия. Напишите программу, помогающую 
-# синоптикам в работе.
-# Пользователь вводит число N – общее количество
-# рассматриваемых дней (1 ≤ N ≤ 100). В следующих строках
-# располагается N целых чисел.
-# Каждое число – среднесуточная температура в
-# соответствующий день. Температуры – целые числа и лежат в
-# диапазоне от –50 до 50
-# Input: 6 -> -20 30 -40 50 10 -10
-# Output: 2
 
-# size = int(input())
-# i = 0
-# count = 0
-# count_max = 0
-# while i < size:
-#     month = int(input())
-#     i += 1
-#     if month > 0:
-#         count += 1
+# def qick_sort(array):
+#     if len(array) <= 1:
+#         return  array
 #     else:
-#         count = 0
-#         continue
-#     count_max = count
-# print(count_max)
+#         pivot = array[0]
+#     les = [i for i in array[1:] if i <= pivot]
+#     greater = [i for i in array[1:] if i > pivot]
+#     return qick_sort(les) + [pivot] + qick_sort(greater)
+# print(qick_sort([14, 5, 9, 28, 1, 68, 5]))
 
 
-# for i in range(size):
-#     number = inputCheck(f'День {i + 1}. Введите температуру (от {tempMin}˚C до {tempMax}˚C): ', tempMin, tempMax)
-#     if number > limit:
-#         count += 1
-#         if countMax < count:
-#             countMax = count
-#     if number <= limit:
-#         count = 0
-#     arrayTemp.append(number)
+# def merge_sort(nums):
+#     if len(nums) > 1:
+#         mid = len(nums) // 2
+#         left = nums[:mid]
+#         right = nums[mid:]
+#         merge_sort(left)
+#         merge_sort(right)
+#         i = j = k = 0
+#         while i < len(left) and j < len(right):
+#             if left[i] < right[j]:
+#                 nums[k] = left[i]
+#                 i += 1
+#             else:
+#                 nums[k] = right[j]
+#                 j += 1
+#             k += 1
+#         while i < len(left):
+#             nums[k] = left[i]
+#             i += 1
+#             k += 1
+#         while j < len(right):
+#             nums[k] = right[j]
+#             j += 1
+#             k += 1
+# list1 = [1, 9, 8, 7, 0, 6, 5, 2]
+# merge_sort(list1)
+# print(list1)
 
-
-
-# Задача №15. Решение в группах
-# 15. Иван Васильевич пришел на рынок и решил 
-# купить два арбуза: один для себя, а другой для тещи. 
-# Понятно, что для себя нужно выбрать арбуз 
-# потяжелей, а для тещи полегче. Но вот незадача: 
-# арбузов слишком много и он не знает как же выбрать 
-# самый легкий и самый тяжелый арбуз? Помогите ему!
-# Пользователь вводит одно число N – количество
-# арбузов. Вторая строка содержит N чисел,
-# записанных на новой строчке каждое. Здесь каждое
-# число – это масса соответствующего арбуза
-# Input: 5 -> 5 1 6 5 9
-# Output: 1 9
-
-# size2 = int(input())
-# i = 0
-# min = 1000
-# max = 0
-# while i < size2:
-#     num = int(input())
-#     if min > num:
-#         min = num
-#     elif max < num:
-#         max = num
-#     i += 1
-# print(min, max)
